@@ -25,7 +25,7 @@ class BookController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="successful",
-     *         @OA\JsonContent(ref="#/components/schemas/Book")
+     *         @OA\JsonContent()
      *     )
      * )
      */
@@ -48,7 +48,7 @@ class BookController extends Controller
      *     @OA\Response(
      *         response=201,
      *         description="Successful",
-     *         @OA\JsonContent(ref="#/components/schemas/Book")
+     *         @OA\JsonContent()
      *     ),
      *     @OA\RequestBody(
      *         required=true,
@@ -102,7 +102,7 @@ class BookController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="Successful",
-     *         @OA\JsonContent(ref="#/components/schemas/Book")
+     *         @OA\JsonContent()
      *     ),
      *     @OA\Parameter(
      *         name="id",
@@ -144,7 +144,7 @@ class BookController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="Successful",
-     *         @OA\JsonContent(ref="#/components/schemas/Book")
+     *         @OA\JsonContent()
      *     ),
      *     @OA\Parameter(
      *         name="id",

@@ -13,10 +13,10 @@
         }
     },
     "paths": {
-        "/api/User/register": {
+        "/api/user/register": {
             "post": {
                 "tags": [
-                    "User"
+                    "user"
                 ],
                 "summary": "Register new user & get token",
                 "operationId": "register",
@@ -29,7 +29,7 @@
                                 "$ref": "#/components/schemas/User"
                             },
                             "example": {
-                                "name": "Kimto kimtoputra",
+                                "name": "Kimto",
                                 "email": "kimto@gmail.com",
                                 "password": "kimto123",
                                 "password_confirmation": "kimto123"
@@ -60,9 +60,9 @@
         "/api/user/login": {
             "post": {
                 "tags": [
-                    "User"
+                    "user"
                 ],
-                "summary": "log in to existing user & get token",
+                "summary": "Log in to existing user & get token",
                 "operationId": "login",
                 "requestBody": {
                     "description": "Request body description",
@@ -88,7 +88,7 @@
                             }
                         }
                     },
-                    "201": {
+                    "200": {
                         "description": "Successful",
                         "content": {
                             "application/json": {
@@ -102,15 +102,15 @@
         "/api/user/logout": {
             "post": {
                 "tags": [
-                    "User"
+                    "user"
                 ],
-                "summary": "log out & destroy self token",
+                "summary": "Log out & destroy self token",
                 "operationId": "logout",
                 "parameters": [
                     {
                         "name": "email",
                         "in": "path",
-                        "description": "User Email",
+                        "description": "Masukan user email",
                         "required": true,
                         "schema": {
                             "type": "string"
@@ -126,7 +126,7 @@
                             }
                         }
                     },
-                    "201": {
+                    "200": {
                         "description": "Successful",
                         "content": {
                             "application/json": {
@@ -155,9 +155,7 @@
                         "description": "successful",
                         "content": {
                             "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Book"
-                                }
+                                "schema": {}
                             }
                         }
                     }
@@ -202,9 +200,7 @@
                         "description": "Successful",
                         "content": {
                             "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Book"
-                                }
+                                "schema": {}
                             }
                         }
                     }
@@ -257,9 +253,7 @@
                         "description": "Successful",
                         "content": {
                             "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Book"
-                                }
+                                "schema": {}
                             }
                         }
                     }
@@ -324,9 +318,7 @@
                         "description": "Successful",
                         "content": {
                             "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Book"
-                                }
+                                "schema": {}
                             }
                         }
                     }
@@ -407,11 +399,6 @@
             "User": {
                 "title": "User model",
                 "description": "User model",
-                "required": [
-                    "name",
-                    "email",
-                    "password"
-                ],
                 "xml": {
                     "name": "User"
                 }

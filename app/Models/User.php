@@ -17,7 +17,6 @@ use OpenApi\Annotations as OA;
  * @OA\Schema(
  *     description="User model",
  *     title="User model",
- *     required={"name", "email", "password"},
  *     @OA\Xml(
  *         name="User"
  *     )
